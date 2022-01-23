@@ -1,0 +1,20 @@
+composer.lock
+/vendor
+*.cache
+.idea/
+.vale.ini
+.php_cs.dist
+.php_cs.ga.dist
+.php-cs-fixer.php
+/coverage
+/scripts
+
+# vuepress docs files
+/docs/.npmignore
+/docs/node_modules
+/docs/package.json
+/docs/package-lock.json
+/docs/yarn.lock
+/docs/src
+/docs/.gitignore
+
