@@ -1,11 +1,16 @@
 <p align="center">
-<img src="https://static.permafrost.dev/images/phpcsfixer-preset/phpcsfixer-preset-logo-03.png" alt="Permafrost Dev" height="200" style="block">
 <br><br>
 <span style="font-size:2.3rem">phpcsfixer-preset</span>
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/packagist/v/permafrost-dev/phpcsfixer-preset" alt="version"/> <img src="https://img.shields.io/packagist/l/permafrost-dev/phpcsfixer-preset" alt="license"/> <img src="https://img.shields.io/packagist/dt/permafrost-dev/phpcsfixer-preset" alt="downloads"/> <img src="https://img.shields.io/github/workflow/status/permafrost-dev/phpcsfixer-preset/Run%20Tests/main" alt="Run Tests"/> <img src="https://coveralls.io/repos/github/permafrost-dev/phpcsfixer-preset/badge.svg?branch=main" alt="Coverage Status" />
+<img src="https://img.shields.io/packagist/v/zvive/fixer" 
+alt="version"/> <img src="https://img.shields.io/packagist/l/zvive/fixer" alt="license"/> <img 
+src="https://img.shields.io/packagist/dt/zvive/fixer" alt="downloads"/> <img src="https://img.
+shields.
+io/github/workflow/status/zvive/fixer/Run%20Tests/main" alt="Run Tests"/> <img 
+src="https://coveralls.
+io/repos/github/zvive/fixer/badge.svg?branch=main" alt="Coverage Status" />
 </p>
 
 <br>
@@ -14,15 +19,17 @@
 
 This package allows you to use the same [php-cs-fixer](https://github.com/FriendsOfPhp/PHP-CS-Fixer) formatting rules across all of your projects without copy-and-pasting configuration files. There's also a quick setup script to automatically generate a configuration file for your project structure and preferred formatting preset.
 
-`permafrost-dev/phpcsfixer-preset` provides several opinionated `php-cs-fixer` configuration choices as well as pre-configured `Finder` classes for common project formats and use cases.
+`zvive/fixer` provides several opinionated `php-cs-fixer` configuration choices as well as 
+pre-configured 
+`Finder` classes for common project formats and use cases.
 
-Supported PHP versions: `7.3`, `7.4`, and `8.0`.
+Supported PHP versions: `8.1`.
 
 The original concept for this package came from this excellent article on [sharing php-cs-fixer configurations across projects](https://laravel-news.com/sharing-php-cs-fixer-rules-across-projects-and-teams)  written by [Tim Mcdonald](https://timacdonald.me/).
 
 ## Installation
 
-`composer require permafrost-dev/phpcsfixer-preset --dev`
+`composer require zvive/fixer --dev`
 
 ---
 
