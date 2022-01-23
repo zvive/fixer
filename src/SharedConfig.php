@@ -18,7 +18,7 @@ class SharedConfig
     ConfigInterface
     {
         if ($ruleset === null) {
-            $ruleset = new ZviveRuleset();
+              $ruleset = new ZviveRuleset();
         }
         return (new Config())
             ->registerCustomFixers(fixers:new CustomFixers())
