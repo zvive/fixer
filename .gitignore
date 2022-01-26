@@ -8,6 +8,7 @@ composer.lock
 .php-cs-fixer.php
 /coverage
 /scripts
+.history
 
 # vuepress docs files
 /docs/.npmignore
@@ -17,4 +18,3 @@ composer.lock
 /docs/yarn.lock
 /docs/src
 /docs/.gitignore
-
