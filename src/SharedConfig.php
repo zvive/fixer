@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zvive\Fixers;
+namespace Zvive\Fixer;
 
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
