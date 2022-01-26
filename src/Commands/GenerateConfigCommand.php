@@ -1,5 +1,6 @@
 <?php
 
+
 namespace Zvive\Fixer\Commands;
 
 use PhpCsFixer\Finder;
