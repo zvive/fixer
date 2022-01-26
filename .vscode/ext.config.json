@@ -1,0 +1,15 @@
+{
+    "disabled": [
+       "ctf0.laravel-goto-config",
+       "ctf0.laravel-goto-controller",
+       "ctf0.laravel-goto-env",
+       "ctf0.laravel-goto-lang",
+       "ctf0.laravel-goto-path",
+       "codingyu.laravel-goto-view",
+       "ctf0.laravel-goto-view",
+       "naoray.laravel-goto-components",
+       "stef-k.laravel-goto-controller"
+    ],
+    "autoReload": true,
+    "openInNewWindow": true
+}
