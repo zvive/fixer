@@ -14,7 +14,7 @@ namespace Zvive\Fixer\Rulesets\Concerns;
           'PromotedConstructorPropertyFixer'         => true,
           'CommentSurroundedBySpacesFixer'           => true,
           'ConstructorEmptyBracesFixer'              => true,
-          'DeclareAfterOpeningTagFixer'              => true,
+          'DeclareAfterOpeningTagFixer'              => false,
           'InternalClassCasingFixer'                 => true,
           'IssetToArrayKeyExistsFixer'               => true,
           'MultilineCommentOpeningClosingAloneFixer' => true,
