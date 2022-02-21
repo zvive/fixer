@@ -139,9 +139,9 @@ class ZviveRuleset extends LaravelShiftRuleset
 
             'heredoc_indentation'     => ['indentation' => 'start_plus_one'],
             'global_namespace_import' => [
-                'import_classes'   => true,
-                'import_constants' => true,
-                'import_functions' => true,
+                'import_classes' => true,
+                // 'import_constants' => true,
+                // 'import_functions' => true,
             ],
 
             'multiline_whitespace_before_semicolons' => ['strategy' => 'new_line_for_chained_calls'],
