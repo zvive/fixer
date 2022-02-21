@@ -1,19 +1,22 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Zvive\Fixer\Rulesets;
 
 use function array_merge;
-use Zvive\Fixer\Rulesets\Concerns\{BoolRules, CustomRules};
+use Zvive\Fixer\Rulesets\Concerns\BoolRules;
+use Zvive\Fixer\Rulesets\Concerns\CustomRules;
 
 class ZviveRuleset extends LaravelShiftRuleset
 {
     use BoolRules;
     use CustomRules;
     public array $falseRulesets = [
-        'single_import_per_statement',
     ];
     public array $trueRulesets = [
         'single_blank_line_before_namespace',
+        'single_import_per_statement',
         'array_indentation',
         'assign_null_coalescing_to_coalesce_equal',
         'backtick_to_shell_exec',
@@ -28,7 +31,7 @@ class ZviveRuleset extends LaravelShiftRuleset
         'explicit_string_variable',
         'fully_qualified_strict_types',
         'function_typehint_space',
-        'group_import',
+        // 'group_import',
         'indentation_type',
         'lambda_not_used_import',
         'line_ending',
