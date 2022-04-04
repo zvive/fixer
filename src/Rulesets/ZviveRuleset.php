@@ -13,6 +13,8 @@ class ZviveRuleset extends LaravelShiftRuleset
     use BoolRules;
     use CustomRules;
     public array $falseRulesets = [
+      'not_operator_with_space',
+      'not_operator_with_successor_space',
     ];
     public array $trueRulesets = [
         'single_blank_line_before_namespace',
@@ -74,7 +76,6 @@ class ZviveRuleset extends LaravelShiftRuleset
         'no_unset_cast',
         'no_whitespace_before_comma_in_array',
         'no_whitespace_in_blank_line',
-        'not_operator_with_space',
         'normalize_index_brace',
         'object_operator_without_whitespace',
         'phpdoc_add_missing_param_annotation',
@@ -144,7 +145,8 @@ class ZviveRuleset extends LaravelShiftRuleset
                 // 'import_functions' => true,
             ],
 
-            'multiline_whitespace_before_semicolons' => ['strategy' => 'new_line_for_chained_calls'],
+            'multiline_whitespace_before_semicolons' => ['strategy' => 'no_multi_line'],
+            // ['strategy' => 'new_line_for_chained_calls'],
 
             'native_function_invocation' => [
                 'include' => ['@all'],
