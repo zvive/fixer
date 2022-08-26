@@ -9,5 +9,6 @@
     "**/bower_components/**",
     "**/vendor/**/{Tests,tests}/**",
     "**/.history/**"
-  ]
+  ],
+  "diffEditor.codeLens": true
 }
