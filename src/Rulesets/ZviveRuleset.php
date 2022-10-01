@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Zvive\Fixer\Rulesets;
 
-use function array_merge;
 use Zvive\Fixer\Rulesets\Concerns\BoolRules;
 use Zvive\Fixer\Rulesets\Concerns\CustomRules;
+
+use function array_merge;
 
 class ZviveRuleset extends LaravelShiftRuleset
 {
@@ -15,6 +16,7 @@ class ZviveRuleset extends LaravelShiftRuleset
     public array $falseRulesets = [
       'not_operator_with_space',
       'not_operator_with_successor_space',
+      'use_arrow_functions',
     ];
     public array $trueRulesets = [
         'single_blank_line_before_namespace',
@@ -96,11 +98,9 @@ class ZviveRuleset extends LaravelShiftRuleset
         'ternary_operator_spaces',
         'trim_array_spaces',
         'unary_operator_spaces',
-        'use_arrow_functions',
-
     ];
 
-    public function rules() : array
+    public function rules(): array
     {
         $rules = [
             // '@psr2' => true,
@@ -138,21 +138,30 @@ class ZviveRuleset extends LaravelShiftRuleset
             //     'closure_function_spacing' => 'none',
             // ],
 
-            'heredoc_indentation'     => ['indentation' => 'start_plus_one'],
+            'comment_to_phpdoc'                => ['ignored_tags' => ['todo']],
+            'general_phpdoc_annotation_remove' => [],
             'global_namespace_import' => [
-                'import_classes' => true,
-                // 'import_constants' => true,
-                // 'import_functions' => true,
+              'import_classes' => true,
+              // 'import_constants' => true,
+              // 'import_functions' => true,
             ],
+            'heredoc_indentation'     => ['indentation' => 'start_plus_one'],
 
             'multiline_whitespace_before_semicolons' => ['strategy' => 'no_multi_line'],
             // ['strategy' => 'new_line_for_chained_calls'],
 
+            // 'native_function_invocation' => [
+            //     'include' => ['@all'],
+            //     'scope'   => 'namespaced',
+            //     'strict'  => true,
+            // ],
+
             'native_function_invocation' => [
-                'include' => ['@all'],
-                'scope'   => 'namespaced',
-                'strict'  => true,
-            ],
+              'exclude' => ['beforeAll', 'afterAll', 'beforeEach', 'afterEach', 'it', 'test', 'uses', 'usesBeforeAll', 'usesBeforeEach', 'dd', 'dump', 'before', 'after', 'config', 'env', 'factory', 'artisan', 'cache', 'app_path', 'base_path', 'database_path'],
+              'include' => ['@compiler_optimized'],
+              'scope'   => 'namespaced',
+              'strict'  => true,
+          ],
 
             'no_alias_functions' => [
                 'sets' => ['@all'],
@@ -177,22 +186,21 @@ class ZviveRuleset extends LaravelShiftRuleset
             'method_argument_space' => [
                 'on_multiline' => 'ensure_fully_multiline',
             ],
+            'no_superfluous_phpdoc_tags'       => false,
             'ordered_class_elements' => [
-                'order' => [
-                    'use_trait',
-                    'constant_public',
-                    'constant_protected',
-                    'constant_private',
-                    'property_public',
-                    'property_protected',
-                    'property_private',
-                    'construct',
-                    'destruct',
-                    'magic',
-                    'phpunit',
-                    'method',
-                ],
-                'sort_algorithm' => 'alpha',
+              'order' => [
+                  'use_trait',
+                  'case',
+                  'constant',
+                  'property',
+                  'construct',
+                  'destruct',
+                  'magic',
+                  'phpunit',
+                  'method_abstract',
+                  'method',
+              ],
+              'sort_algorithm' => 'none',
             ],
             'ordered_imports' => [
                 'sort_algorithm' => 'length',
